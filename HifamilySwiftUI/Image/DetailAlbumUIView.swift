@@ -69,13 +69,13 @@ struct DetailAlbumUIView: View {
                         }
 
                     }
-                    .frame(width: 280)
+                    .frame(width: 300)
                     .background(Color(white: 0.99))
                     .overlay(RoundedRectangle(cornerRadius: 15.0, style: .continuous   ).stroke(Color.init(red: 255/255, green: 169/255, blue: 54/255),lineWidth: 1.4)).shadow(radius: 1)
                     .cornerRadius(15)
                     .shadow(color: .gray, radius: 10, x: 0, y: 3)
                     .animation(.easeInOut)
-        .frame(width: 300, height: 600, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+//        .frame(width: 300, height: 600, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 20, trailing: 15))
                 }
             }

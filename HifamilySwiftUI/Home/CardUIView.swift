@@ -13,8 +13,8 @@ struct CardUIView: View {
 
     @State var isChangeInformantion = false //用来标识是否更改信息
     @State var memberName = "智妍"
-    @State var memberIdentity = "女儿"
-    @State var memberTelephone = "2021/12/1"
+    @State var memberIdentity = "2021/12/1"
+    @State var memberTelephone = "15025584040"
     @State private var showingAlert = false
     
     var body: some View {
@@ -94,7 +94,7 @@ struct CardUIView: View {
         .onTapGesture {
 //            self.fold.toggle()
         }
-        .frame(minWidth: 0/*@END_MENU_TOKEN@*/,  maxWidth: .infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0,  maxHeight: /*@START_MENU_TOKEN@*/.infinity, alignment: .topLeading)
+        .frame(minWidth: 0/*@END_MENU_TOKEN@*/,  maxWidth: .infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0,  maxHeight: /*@START_MENU_TOKEN@*/.infinity, alignment: .center)
         
     }
     
@@ -106,3 +106,4 @@ struct CardUIView_Previews: PreviewProvider {
         CardUIView()
     }
 }
+
