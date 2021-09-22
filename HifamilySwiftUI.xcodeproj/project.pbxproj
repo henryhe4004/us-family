@@ -34,6 +34,8 @@
 		898693E726F374F400EA991E /* MissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898693E626F374F400EA991E /* MissView.swift */; };
 		8989D13326F4D7A0007B6719 /* AddMemberCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989D13226F4D7A0007B6719 /* AddMemberCardUIView.swift */; };
 		8996E2C026F420E000F122BD /* LoveHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996E2BF26F420E000F122BD /* LoveHistoryView.swift */; };
+		CDCB5C5A26FB530C00CF25BE /* MyTimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB5C5926FB530C00CF25BE /* MyTimeLineView.swift */; };
+		CDCB5C5E26FB556600CF25BE /* TimeLineVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB5C5D26FB556600CF25BE /* TimeLineVeiw.swift */; };
 		CDE09D0826F79449004DE2AB /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE09D0726F79449004DE2AB /* DataTest.swift */; };
 		CDED5B0D26F4DF2F00570485 /* LetterVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED5B0C26F4DF2F00570485 /* LetterVeiw.swift */; };
 		CDED5B0F26F4E0D300570485 /* WriteLetterVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED5B0E26F4E0D300570485 /* WriteLetterVeiw.swift */; };
@@ -72,6 +74,8 @@
 		8989D13226F4D7A0007B6719 /* AddMemberCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberCardUIView.swift; sourceTree = "<group>"; };
 		8996E2BF26F420E000F122BD /* LoveHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveHistoryView.swift; sourceTree = "<group>"; };
 		8D8E495DFB5BA16B973644AC /* Pods-HifamilySwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HifamilySwiftUI.release.xcconfig"; path = "Target Support Files/Pods-HifamilySwiftUI/Pods-HifamilySwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		CDCB5C5926FB530C00CF25BE /* MyTimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimeLineView.swift; sourceTree = "<group>"; };
+		CDCB5C5D26FB556600CF25BE /* TimeLineVeiw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineVeiw.swift; sourceTree = "<group>"; };
 		CDE09D0726F79449004DE2AB /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 		CDED5B0C26F4DF2F00570485 /* LetterVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterVeiw.swift; sourceTree = "<group>"; };
 		CDED5B0E26F4E0D300570485 /* WriteLetterVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLetterVeiw.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		890C993126EF3A6700494182 /* HifamilySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CDCB5C5626FB529500CF25BE /* TimeLine */,
 				715C339F26F8B06E00491BF7 /* TextView.swift */,
 				896128AA26F8341A0048A163 /* Model */,
 				71BF8B7926F6090D0006081B /* Image */,
@@ -198,6 +203,15 @@
 				8D8E495DFB5BA16B973644AC /* Pods-HifamilySwiftUI.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CDCB5C5626FB529500CF25BE /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB5C5D26FB556600CF25BE /* TimeLineVeiw.swift */,
+				CDCB5C5926FB530C00CF25BE /* MyTimeLineView.swift */,
+			);
+			path = TimeLine;
 			sourceTree = "<group>";
 		};
 		CDED5B0B26F4DF2300570485 /* Letter */ = {
@@ -332,6 +346,7 @@
 				71BF8B7B26F609260006081B /* ImagePickerView.swift in Sources */,
 				89628E2626F81DEA00AA41C1 /* Textfield02.swift in Sources */,
 				8989D13326F4D7A0007B6719 /* AddMemberCardUIView.swift in Sources */,
+				CDCB5C5E26FB556600CF25BE /* TimeLineVeiw.swift in Sources */,
 				718E65EC26F71A250010165C /* albumUIView.swift in Sources */,
 				7199557B26FB1EE1003ABE28 /* VideoUIView.swift in Sources */,
 				715C33A026F8B06E00491BF7 /* TextView.swift in Sources */,
@@ -339,6 +354,7 @@
 				893BD76126F04A6000026C38 /* LoveView.swift in Sources */,
 				718E65E626F6D1BA0010165C /* ImageUIView.swift in Sources */,
 				712FF5DA26FA33EC0000BE2B /* DetailAlbumUIView.swift in Sources */,
+				CDCB5C5A26FB530C00CF25BE /* MyTimeLineView.swift in Sources */,
 				898693E326F3473000EA991E /* CardUIView.swift in Sources */,
 				CDED5B0F26F4E0D300570485 /* WriteLetterVeiw.swift in Sources */,
 				8979282426F21053008F49AB /* HomeLandUIView.swift in Sources */,

@@ -103,13 +103,14 @@ struct WriteLetterView: View {
                             .font(.system(size: 16))
                     }.padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 0))
                 }.padding(EdgeInsets(top: 20, leading: 270, bottom: 0, trailing:0))
-            }.navigationBarTitle(Text("写家书").foregroundColor(grayColor2)
-                .font(.system(size: 22)),displayMode: .inline)
+            }
+            .navigationBarTitle(Text("写家书"),displayMode: .inline)
             .navigationBarItems(trailing: Button(action:{} ){
                 Text("寄出")
                     .foregroundColor(orangeColor)
 //                    .font(.system(size: 22))
             })
+            
             
             Spacer()
         }
