@@ -117,6 +117,7 @@
 			children = (
 				718E65E126F6BC600010165C /* Localizable.strings */,
 				890C993126EF3A6700494182 /* HifamilySwiftUI */,
+				890C993826EF3A6800494182 /* Preview Content */,
 				890C993026EF3A6700494182 /* Products */,
 				C3E5AF600284A65580D91E19 /* Pods */,
 				091DF49DA467E1446ABAFB9B /* Frameworks */,
@@ -135,17 +136,16 @@
 			isa = PBXGroup;
 			children = (
 				715C339F26F8B06E00491BF7 /* TextView.swift */,
+				898693E426F3746B00EA991E /* Love */,
 				896128AA26F8341A0048A163 /* Model */,
 				71BF8B7926F6090D0006081B /* Image */,
 				CDED5B0B26F4DF2300570485 /* Letter */,
+				8979282526F21739008F49AB /* Home */,
 				890C993226EF3A6700494182 /* HifamilySwiftUIApp.swift */,
 				890C993426EF3A6700494182 /* ContentView.swift */,
 				890C993B26EF3A6800494182 /* Persistence.swift */,
-				898693E426F3746B00EA991E /* Love */,
-				8979282526F21739008F49AB /* Home */,
 				890C993626EF3A6800494182 /* Assets.xcassets */,
 				890C994026EF3A6800494182 /* Info.plist */,
-				890C993826EF3A6800494182 /* Preview Content */,
 			);
 			path = HifamilySwiftUI;
 			sourceTree = "<group>";

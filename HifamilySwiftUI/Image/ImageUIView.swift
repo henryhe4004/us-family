@@ -169,12 +169,15 @@ struct ImageUIView: View {
                     }
                 if(indexSelected == 2){
                     ZStack{
-                    ScrollView(.vertical, showsIndicators: false){
+                        ScrollView(.vertical, showsIndicators: false){
+                            
                         photosUIView(detailAlbum: $detailAlbum, detailText: $detailText,isSelected1: $isSelected1)
                     }
+                        ScrollView(.vertical, showsIndicators: false){
                         if(isSelected1){
                             DetailAlbumUIView(detailAlbum: $detailAlbum, detailText: $detailText, isSelected1: $isSelected1)
                         }
+                    }
                 }
                 }
                 if(indexSelected == 3){
