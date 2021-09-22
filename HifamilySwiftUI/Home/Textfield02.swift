@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import CoreData
+
 
 struct Textfield02: View {
     
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: MemberModel.entity(),
+                  sortDescriptors: [
+                    NSSortDescriptor(keyPath: \MemberModel.familyId, ascending: true)])
+    var memberModels: FetchedResults<MemberModel>
+    
     @State var isPressed = false //是否按压图片
-    let avatar = ["mother","father","sister"]
-    let memberName = ["妈妈","爸爸","女儿"]
-    let birthdy = ["2021/3/1","2020/4/5","2022/6/7"]
-    let memberTelephone = ["1234567","123456","123455"]
+    
     
     var body: some View {
         ZStack {
@@ -26,43 +31,45 @@ struct Textfield02: View {
                   
                     Spacer()
                     VStack {
-                        Image(systemName: "arrowshape.turn.up.left.fill")
-                            .resizable(resizingMode: .tile)
-                            .aspectRatio(contentMode: .fill)
-                            .foregroundColor(Color("AccentColor"))
-                            .onTapGesture {
-                                isPressed = false
-                            }
-                            .frame(width: 30, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .offset(x: -630, y: 0)
-                        
-                            
-                        
                         HStack(alignment: .center, spacing: 10) {
                             Spacer()
 
+                            Image(systemName: "arrow.left")
+                                .resizable(resizingMode: .tile)
+                                .aspectRatio(contentMode: .fill)
+                                .foregroundColor(Color("AccentColor"))
+                                .onTapGesture {
+                                    isPressed = false
+                                }
+                                .frame(width: 30, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .padding()
                             KeyboardHost{
                                 ScrollView{
                                 AddMemberCardUIView()
                                 }
                             }
-                            ForEach( 0 ..< memberName.count){ i in
-                                KeyboardHost {
-                                    ScrollView{
-                                        CardUIView(image: avatar[i],memberName:memberName[i],memberIdentity:birthdy[i],memberTelephone:memberTelephone[i]).padding()
+
+                            
+                                //显示Core Data数据库内容的列表
+                                //将数据库的familyName输出
+                            
+
+                            //改回来
+                ForEach(memberModels, id: \.name) { memberModel in
+                        KeyboardHost {
+                            ScrollView{
+                                CardUIView(image:memberModel.avatar! ,memberName:memberModel.name! ,memberIdentity:memberModel.birthday! ,memberTelephone:memberModel.phone!).padding()
+                                            }
                                     }
+
+
                                 }
-                            }
-                           
-//                            CardUIView(image: "mother",memberName:"妈妈",memberIdentity:"女儿",memberTelephone:"15025584040").padding()
-//                            CardUIView(image: "father",memberName:"爸爸",memberIdentity:"爸爸",memberTelephone:"15025584040").padding()
-//                            CardUIView(image: "sister",memberName:"姐姐",memberIdentity:"姐姐",memberTelephone:"15025584040").padding()
-                            Spacer()
+                                
                         }
                         
                         
                     }
-                    Spacer()
+//                    Spacer()
                 }
             }else{
                 VStack {
@@ -106,8 +113,7 @@ struct Textfield02: View {
                             .offset(x: 40, y: -40)
                         
                     }
-//                    Image("addMember")
-//                        .offset(x: -80, y: -70)
+
                 }.offset(x: 10, y: -100)
             }
            
@@ -152,7 +158,7 @@ struct KeyboardHost<Content: View>: View {
         VStack {
             view
             Rectangle()
-                .frame(height: keyboardHeight)
+                .frame(height: keyboardHeight/3)
                 .animation(.default)
                 .foregroundColor(.clear)
         }.onReceive(showPublisher.merge(with: hidePublisher)) { (height) in
@@ -160,3 +166,4 @@ struct KeyboardHost<Content: View>: View {
         }
     }
 }
+
