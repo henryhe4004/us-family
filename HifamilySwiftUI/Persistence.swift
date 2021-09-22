@@ -14,8 +14,11 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newfamily = FamilyModel(context: viewContext)
+            newfamily.familyMemberCount = 6
+            newfamily.familyName = "相亲相爱"
+            newfamily.familyTree = 0
+            newfamily.familyId = UUID()
         }
         do {
             try viewContext.save()
@@ -31,11 +34,14 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "HifamilySwiftUI")
+        
+        //原本是name:HifamilySwiftUI
+        container = NSPersistentCloudKitContainer(name: "Model")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            print(storeDescription)
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -51,5 +57,8 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+
     }
+    
 }
+
